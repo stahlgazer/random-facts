@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 export default function Factoftheday() {
   const [fact, setFact] = useState();
@@ -13,7 +15,13 @@ export default function Factoftheday() {
   }, []);
   return (
     <div>
-      <p>{fact ? fact.text : "Loading..."}</p>
+        {fact ? (
+          `Fact of the Day: ${fact.text}`
+        ) : (
+          <Box sx={{ display: "flex" }}>
+            <CircularProgress color="secondary"/>
+          </Box>
+        )}
     </div>
   );
 }

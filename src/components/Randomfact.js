@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import Button from '@mui/material/Button'
 
 export default function Randomfact() {
   const [fact, setFact] = useState();
@@ -13,7 +16,14 @@ export default function Randomfact() {
   }, []);
   return (
     <div>
-      <p>{fact ? fact.text : "Loading..."}</p>
+      {fact ? (
+        `Random Fact: ${fact.text}`
+      ) : (
+        <Box sx={{ display: "flex" }}>
+          <CircularProgress color="secondary"/>
+        </Box>
+      )}
+      <Button>Next Random Fact</Button>
     </div>
   );
 }

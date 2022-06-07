@@ -1,0 +1,26 @@
+// reset
+* {
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+    text-align:center;
+  }
+
+.banner-container{
+    background-color:#00203FFF;
+    text-align:center;
+    width: 100%;
+    color:white;
+    padding:2%;
+    margin-bottom:2%;
+    .header {
+        margin-bottom:2%; 
+    }
+    .info {
+        max-width:90%;
+        margin:auto;
+        font-size:1.15rem;
+        
+    }
+}
