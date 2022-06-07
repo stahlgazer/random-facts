@@ -14,14 +14,17 @@ export default function Factoftheday() {
       .catch((error) => console.log(error));
   }, []);
   return (
-    <div>
-        {fact ? (
-          `Fact of the Day: ${fact.text}`
-        ) : (
-          <Box sx={{ display: "flex" }}>
-            <CircularProgress color="secondary"/>
-          </Box>
-        )}
+    <div className="fotd-container">
+      {fact ? (
+        <>
+          <h2>Fact of the Day: </h2>
+          <p className="text">{fact.text}</p>
+        </>
+      ) : (
+        <Box sx={{ display: "flex", justifyContent: 'center' }}>
+          <CircularProgress color="secondary" />
+        </Box>
+      )}
     </div>
   );
 }

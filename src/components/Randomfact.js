@@ -6,6 +6,11 @@ import Button from '@mui/material/Button'
 
 export default function Randomfact() {
   const [fact, setFact] = useState();
+  const [clicked,setClicked] = useState(0);
+  const handleClick = () => {
+    setClicked(clicked+1)
+  }
+
   useEffect(() => {
     axios
       .get("https://uselessfacts.jsph.pl/random.json?language=en")
@@ -13,17 +18,20 @@ export default function Randomfact() {
         setFact(data.data);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [clicked]);
   return (
-    <div>
+    <div className="random-container">
       {fact ? (
-        `Random Fact: ${fact.text}`
+        <>
+        <h2>Random Fact: </h2>
+        <p className="text">{fact.text}</p>
+      </>
       ) : (
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", justifyContent: 'center' }}>
           <CircularProgress color="secondary"/>
         </Box>
       )}
-      <Button>Next Random Fact</Button>
+      <Button onClick={handleClick} className="button" color="inherit" variant="outlined">Next Random Fact</Button>
     </div>
   );
 }

@@ -7,11 +7,9 @@
 }
 
 .banner-container {
-  background-color: #00203FFF;
-  text-align: center;
-  width: 100%;
+  background-color: #00203fff;
   color: white;
-  padding: 2%;
+  padding: 75px;
   margin-bottom: 2%;
 }
 
@@ -23,5 +21,31 @@
   max-width: 90%;
   margin: auto;
   font-size: 1.15rem;
+}
+
+.fotd-container {
+  background-color: white;
+  color: #00203fff;
+  padding: 100px;
+}
+
+.fotd-container .text {
+  font-size: 1.25rem;
+  padding: 15px;
+}
+
+.random-container {
+  background-color: #00203fff;
+  color: white;
+  padding: 100px;
+}
+
+.random-container .text {
+  padding: 15px;
+  font-size: 1.25rem;
+}
+
+.random-container .button:hover {
+  color: dodgerblue;
 }
 /*# sourceMappingURL=App.css.map */
