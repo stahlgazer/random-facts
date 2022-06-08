@@ -6,7 +6,7 @@ import Randomfact from './components/Randomfact'
 
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <About />
       <Factoftheday />
       <Randomfact />

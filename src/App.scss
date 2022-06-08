@@ -7,45 +7,62 @@
     text-align: center;
 }
 
-.banner-container {
-    background-color: #00203fff;
-    color: white;
-    padding: 75px;
-    margin-bottom: 2%;
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 
-    .header {
-        margin-bottom: 2%;
+    .banner-container {
+
+        background-color: #00203fff;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 1 auto;
+
+        // .header {}
+        .info {
+            padding: 20px;
+            font-size: 18px;
+        }
     }
 
-    .info {
-        max-width: 90%;
-        margin: auto;
-        font-size: 1.15rem;
-    }
-}
+    .fotd-container {
 
-.fotd-container {
-    background-color: white;
-    color: #00203fff;
-    padding: 100px;
+        background-color: white;
+        color: #00203fff;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-    .text {
-        font-size: 1.25rem;
-        padding: 15px;
-    }
-}
-
-.random-container {
-    background-color: #00203fff;
-    color: white;
-    padding: 100px;
-
-    .text {
-        padding: 15px;
-        font-size: 1.25rem;
+        .text {
+            padding: 20px;
+            font-size: 18px;
+        }
     }
 
-    .button:hover {
-        color: dodgerblue;
+    .random-container {
+
+        background-color: #00203fff;
+        color: white;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .text {
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .button {
+            margin: 0 auto;
+        }
+
+        .button:hover {
+            color: dodgerblue;
+        }
     }
 }
